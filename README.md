@@ -1,4 +1,6 @@
 # 🌟 AmigoLink - Social Media Platform
+## Project Completion
+This project was completed in 2022.
 
 A modern social media platform built with PHP and MySQL, inspired by Twitter/X. Connect with friends, share your thoughts, and stay updated with what's happening around you.
 
