@@ -1,0 +1,27 @@
+njmt klat nuxn apmr
+
+do not forget to make headers in all of pages
+
+
+QKGyYdM
+
+u2tGJPR
+
+$2y$10$zT6DcSEWLJWgR5hx9l/yI.dKOrECM.4nEZv.o6J3RNsRdovAf5OgC
+$2y$10$lVR1HomhF.CjsRqTUusShev0nJlvizdvU2VuNa/FX9.TmecdPhH8O
+$2y$10$GZUQsDa2lpjQoNyt8vzyHOZ2w.sTs0onfvEKfQRarE.0nEAk82z5m
+
+
+
+    <!-- validate on email form here by js as do not make him input invalid email foramt-->
+    <!-- u can use this
+    
+    function isValidEmail(email) {
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return emailRegex.test(email);
+}
+on input check 
+and make the backgound light.jpg
+and style the form in the middle of the page with a nice borders and nice layout overall
+and make css and js in diffrenct files
+    -->

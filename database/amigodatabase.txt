@@ -1,0 +1,101 @@
+
+create table users(
+user_id int primary key auto_increment,
+email varchar(255),
+username varchar(100),
+handlename varchar(100),
+password varchar(255),
+profileimage varchar(255) DEFAULT 'default.jpg',
+backgroundcover varchar(255) DEFAULT 'backcover.png',
+bio varchar(255)
+);
+
+
+CREATE TABLE `comments` (
+  `comment_id` int(11) ,
+  `content` varchar(255) ,
+  `user_id` int(11) NOT NULL ,
+  `post_id` int(11) NOT NULL,
+  `time` datetime NOT NULL
+);
+
+create table posts(
+    post_id int ,
+    user_id int ,
+    post_date timestamp,
+    file varchar(255),
+    content varchar(255)
+);
+
+create table follow(
+   follow_id int,
+   follower_id int,
+   following_id int,
+   follow_date timestamp
+);
+
+CREATE TABLE `replies`(
+  `replies_id` int(11),
+  `comment_id` int(11),
+  `user_id` int(11),
+  `reply_content` varchar(140),
+  `time` datetime 
+);
+
+
+
+
+ALTER TABLE `replies`
+	add primary key(`replies_id`),
+	add key `comment_id` (`comment_id`) ;
+
+ALTER TABLE `posts`
+	add primary key(`post_id`),
+	add key `user_id` (`user_id`);
+
+ALTER TABLE `comment`
+	add primary key(`comment_id`),
+	add key `post_id`(`post_id`),
+	add key `user_id`(`user_id`);
+
+
+ALTER TABLE `follow`
+	add primary key (`follow_id`),
+	add key `follower_id` (`user_id`),
+	add key `following_id`(`user_id`);
+
+
+
+
+
+
+-- CREATE TABLE `notifications` (
+--   `id` int(11) NOT NULL,
+--   `notify_for` int(11) NOT NULL,
+--   `notify_from` int(11) NOT NULL,
+--   `target` int(11) NOT NULL,
+--   `type` enum('follow','like','retweet','qoute','comment','reply','mention') COLLATE utf16_unicode_ci NOT NULL,
+--   `time` datetime NOT NULL,
+--   `count` int(11) NOT NULL,
+--   `status` int(11) NOT NULL
+--   );
+
+
+
+
+
+alter table users
+	add unique (handlename);
+
+
+
+
+i think that is better for simple project now :
+CREATE TABLE friendships (
+    friendship_id INT AUTO_INCREMENT PRIMARY KEY,
+    user_id INT,
+    friend_id INT,
+    status ENUM('pending', 'accepted') DEFAULT 'pending',
+    FOREIGN KEY (user_id) REFERENCES users(user_id),
+    FOREIGN KEY (friend_id) REFERENCES users(user_id)
+);

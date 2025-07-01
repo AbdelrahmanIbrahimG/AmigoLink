@@ -1,0 +1,142 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --font-color: white;
+}
+.body-light-mode {
+  --font-color: black;
+}
+.headerr {
+  margin-bottom: 15px;
+}
+.headerr .containerr {
+  position: relative;
+}
+
+.headerr .containerr .upperr {
+  position: relative;
+  height: 250px;
+  width: 100%;
+  background-color: lightsteelblue;
+  border-radius: 10px;
+}
+.headerr .containerr .upperr img {
+  width: 100%;
+  height: 250px;
+  border-radius: 10px;
+}
+.headerr .containerr .lowerr .imagee {
+  width: 160px;
+  height: 160px;
+  position: relative;
+  border-radius: 50%;
+  bottom: 125px;
+  left: 40px;
+}
+.headerr .containerr .lowerr {
+  display: flex;
+  justify-content: space-between;
+}
+@media (max-width: 670px) {
+  .headerr .containerr .lowerr {
+    flex-direction: column;
+  }
+}
+.headerr .containerr .lowerr .imagee img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+}
+@media (max-width: 480px) {
+  .headerr .containerr .lowerr .imagee img {
+    width: 150px;
+    height: 150px;
+  }
+}
+.headerr .containerr .namess {
+  padding-left: 40px;
+  color: var(--font-color);
+}
+
+.headerr .containerr .lowerr .namess h1 {
+  margin-bottom: 5px;
+}
+.upperr .iconn {
+  color: white;
+  width: 50px;
+  height: 50px;
+  font-size: 35px;
+  position: relative;
+  bottom: -10px;
+  border-radius: 50%;
+  right: -10px;
+  display: flex;
+  justify-content: center;
+  z-index: 10;
+  background: #bfbfd1;
+  align-items: center;
+  cursor: pointer;
+  position: absolute;
+}
+.lowerr .iconn {
+  color: white;
+  width: 50px;
+  height: 50px;
+  font-size: 35px;
+  position: relative;
+  top: 190px;
+  left: 155px;
+  background: #bfbfd1;
+  border-radius: 50%;
+  right: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+@media (max-width: 480px) {
+  .lowerr .iconn {
+    top: 155px;
+    left: 110px;
+  }
+}
+.lowerr .info {
+  margin-top: 40px;
+  margin-right: 15px;
+  font-size: 18px;
+  font-weight: bold;
+  color: var(--font-color);
+}
+@media (max-width: 670px) {
+  .lowerr .info,
+  .headerr .containerr .namess {
+    text-align: center;
+  }
+}
+.containerr .info div {
+  display: inline-block;
+  margin-left: 15px;
+}
+/* .containerr .info div span {
+  color: antiquewhite;
+} */
+hr {
+  width: 80%;
+}
+.hr {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hr {
+  margin: 20px;
+}
+@media (max-width: 480px) {
+  .main .left {
+    padding: 10px 3px;
+  }
+}

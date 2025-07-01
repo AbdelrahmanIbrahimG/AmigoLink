@@ -1,0 +1,336 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+*:focus {
+  outline: none;
+}
+:root {
+  /* --primary-one: #0e040c;
+  --primary-two: #2772a1; */
+  --main-color: white;
+}
+.ligth-theme {
+  /* --primary-one: #b2b2b2;
+  --primary-two: #2772a1; */
+  --main-color: black;
+}
+a {
+  text-decoration: none;
+}
+body {
+  background-image: url("images/dark.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: sans-serif;
+  /* background-image: linear-gradient(var(--primary-one), var(--primary-two)); */
+  min-height: 100vh;
+
+  color: var(--main-color);
+}
+
+/* start header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 60px;
+}
+@media (max-width: 768px) {
+  .header {
+    padding: 20px;
+  }
+}
+.header a {
+  color: var(--main-color);
+}
+.dark-mode,
+.light-mode {
+  width: 40px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  background-color: white;
+  align-items: center;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.dark-mode i,
+.light-mode i {
+  font-size: 25px;
+  color: black;
+}
+.light-mode {
+  display: none;
+}
+
+/* end header */
+/* start landing */
+.landing {
+  min-height: calc(100vh - 120px);
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 0;
+}
+.landing .form .register-form {
+  display: none;
+}
+
+.landing .form {
+  /* position: relative; */
+  width: 400px;
+  background-color: rgba(0, 0, 0, 0.5);
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6);
+  border-radius: 15px;
+  text-align: center;
+  padding: 40px;
+  /* overflow: hidden; */
+}
+/* error */
+.password-error {
+  margin-bottom: 15px;
+}
+.login-password-error {
+  margin-bottom: 15px;
+}
+.email-exsist-error {
+  font-size: 20px;
+}
+.first-name-error,
+.last-name-error,
+.email-error,
+.password-error,
+.login-password-error,
+.login-email-error,
+.email-exsist-error,
+.login-error,
+.otp-error {
+  color: red;
+}
+
+/* .landing .form::after {
+  content: "";
+  position: absolute;
+  background-color: red;
+  width: 400px;
+  height: 412px;
+  transform-origin: bottom right;
+  -webkit-animation: ani 6s linear infinite;
+  animation: ani 3s linear infinite;
+  top: -50%;
+  left: -50%;
+}
+@-webkit-keyframes ani {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes ani {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+} */
+@media (max-width: 450px) {
+  .landing .form {
+    width: 350px;
+  }
+}
+@media (max-width: 370px) {
+  .landing .form {
+    width: 280px;
+  }
+}
+/* .landing .form form {
+  position: absolute;
+  inset: 2px;
+} */
+.landing .form form h2 {
+  margin: 30px 0;
+}
+.landing .form form input[type="text"],
+.landing .form form input[type="password"],
+.landing .form form input[type="email"] {
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  border-bottom: white solid 2px;
+  margin-bottom: 18px;
+  padding: 10px 0;
+  caret-color: white;
+  font-size: 16px;
+  color: white;
+}
+.landing .form form .submit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.landing .form form .submit input {
+  padding: 10px 20px;
+  background-color: transparent;
+  border: none;
+  color: #289bb8;
+  font-size: 16px;
+  cursor: pointer;
+}
+.landing .form form .s:hover {
+  background: #289bb8;
+  border-radius: 5px;
+  box-shadow: 0 0 5px #289bb8, 0 0 25px #289bb8, 0 0 50px #289bb8,
+    0 0 100px #289bb8;
+}
+
+.landing .form form .s:hover input {
+  color: #fff;
+}
+.landing .form form .s {
+  position: relative;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  overflow: hidden;
+}
+.landing .form form .s span {
+  position: absolute;
+}
+
+.landing .form form .s span:nth-child(2) {
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #289bb8);
+  top: 0;
+  -webkit-animation: sp1 1s linear infinite;
+  animation: sp1 1s linear infinite;
+}
+@-webkit-keyframes sp1 {
+  0% {
+    left: -100%;
+  }
+  50%,
+  100% {
+    left: 100%;
+  }
+}
+@keyframes sp1 {
+  0% {
+    left: -100%;
+  }
+  50%,
+  100% {
+    left: 100%;
+  }
+}
+.landing .form form .s span:nth-child(3) {
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, #289bb8);
+  right: 0;
+  top: -100%;
+
+  -webkit-animation: sp2 1s linear infinite;
+
+  animation: sp2 1s linear infinite;
+  -webkit-animation-delay: 0.25s;
+  animation-delay: 0.25s;
+}
+@-webkit-keyframes sp2 {
+  0% {
+    top: -100%;
+  }
+  50%,
+  100% {
+    top: 100%;
+  }
+}
+@keyframes sp2 {
+  0% {
+    top: -100%;
+  }
+  50%,
+  100% {
+    top: 100%;
+  }
+}
+.landing .form form .s span:nth-child(4) {
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #289bb8);
+  bottom: 0;
+  right: -100%;
+
+  -webkit-animation: sp3 1s linear infinite;
+
+  animation: sp3 1s linear infinite;
+  -webkit-animation-delay: 0.5s;
+  animation-delay: 0.5s;
+}
+@-webkit-keyframes sp3 {
+  0% {
+    right: -100%;
+  }
+  50%,
+  100% {
+    right: 100%;
+  }
+}
+@keyframes sp3 {
+  0% {
+    right: -100%;
+  }
+  50%,
+  100% {
+    right: 100%;
+  }
+}
+.landing .form form .s span:nth-child(5) {
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, #289bb8);
+  left: 0;
+  bottom: -100%;
+
+  -webkit-animation: sp4 1s linear infinite;
+
+  animation: sp4 1s linear infinite;
+  -webkit-animation-delay: 0.75s;
+  animation-delay: 0.75s;
+}
+@-webkit-keyframes sp4 {
+  0% {
+    bottom: -100%;
+  }
+  50%,
+  100% {
+    bottom: 100%;
+  }
+}
+@keyframes sp4 {
+  0% {
+    bottom: -100%;
+  }
+  50%,
+  100% {
+    bottom: 100%;
+  }
+}
+.landing .form form .message {
+  margin: 15px 0;
+  color: #b3b3b3;
+  font-size: 12px;
+}
+.landing .form form .message a,
+.landing .form form .forget a {
+  color: #289bb8;
+  text-decoration: none;
+}
+
+/* end landing */

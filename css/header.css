@@ -1,0 +1,37 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* start header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 60px;
+}
+.header a {
+  text-decoration: none;
+  color: black;
+}
+.help {
+  position: relative;
+}
+.help p {
+  color: black;
+  font-size: 18px;
+  font-weight: bold;
+}
+@media (max-width: 768px) {
+  .header {
+    padding: 20px;
+  }
+}
+.header .help span {
+  position: absolute;
+  right: -15px;
+  top: 3px;
+}
+i {
+  font-size: 18px;
+}
+/* end header */
